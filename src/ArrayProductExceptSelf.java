@@ -11,7 +11,7 @@ public class ArrayProductExceptSelf {
 		for(int i=0; i< nums.length ; i++){
 			if(nums[i] != 0 && zeronum <= 2){
 				productall = productall * nums[i];
-//				System.out.println(productall);
+				System.out.println(productall);
 			}else if( zeronum >= 2){
 				productall = 0;
 			}else
@@ -23,12 +23,25 @@ public class ArrayProductExceptSelf {
 			
 //			int product = 
 //			num[i] = num[i];
-			if( nums[i] == 0 && zeronum >= 2)
+			if( zeronum >= 2){
 				nums[i] = 0;
-			else if( nums[i] == 0)
-				nums[i] = productall;
-			else
+//				System.out.println("1 " + nums[i]);
+			}
+//			else if( nums[i] != 0 && zeronum < 2){
+//				nums[i] = productall;
+//				System.out.println("2 " + nums[i]);
+//			}
+			else if (zeronum == 1){
+				if( nums[i] != 0 )
+					nums[i] = 0;
+				else
+					nums[i] = productall;
+//				System.out.println("3 " + nums[i]);
+			}
+			else{
 				nums[i] = productall / nums[i];
+			}
+				
 		
 		}
 		

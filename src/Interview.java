@@ -253,7 +253,9 @@ public class Interview {
 		
 		
 		ArrayProductExceptSelf apes = new ArrayProductExceptSelf();
-		int [] apes1 = { 8, 2, 0, 3, 10 };
+//		int [] apes1 = { 8, 2, 0, 3, 10 };
+//		int [] apes1 = { 0, 0, 0 };	
+		int [] apes1 = { 8, 2, 3, 10 };
 		apes.productExcept( apes1 );
 		
 		
