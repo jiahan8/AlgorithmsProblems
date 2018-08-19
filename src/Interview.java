@@ -260,6 +260,13 @@ public class Interview {
 		
 		
 		
+		TopFrequentElements tfe = new TopFrequentElements();
+		int [] tfe1 = { 8, 8, 8, 9, 2,2, 3, 1,1};
+		int k = 2;
+		System.out.println( tfe.frequentElements( tfe1, k) );
+		
+		
+		
 		
 	}
 	
