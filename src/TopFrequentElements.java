@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
+import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -47,8 +48,12 @@ public class TopFrequentElements {
 		}
 		
 		
-		for(int i=0; i<k;i++)
-			frequencytop[i] = set.pollLast();
+		for(int i=0; i<k;i++){
+			
+			if(!set.isEmpty())
+				frequencytop[i] = set.pollLast();
+			
+		}
 //		queue.poll();
 		
 		

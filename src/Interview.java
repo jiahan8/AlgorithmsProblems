@@ -170,10 +170,10 @@ public class Interview {
 		hd.hammingDistance( 3, 8 );
 		
 		
-		QueueReconstructionByHeight rq = new QueueReconstructionByHeight();
-		int [][] people = { {7,0} , {4,4} , {7,1} , {5,0} , {6,1} , {5,2} };
-		System.out.println( rq.reconstructQueue( people ) );
-		
+//		QueueReconstructionByHeight rq = new QueueReconstructionByHeight();
+//		int [][] people = { {7,0} , {4,4} , {7,1} , {5,0} , {6,1} , {5,2} };
+//		System.out.println( rq.reconstructQueue( people ) );
+//		
 		
 		BTMaxDepth btmd = new BTMaxDepth();
 		TreeNode tn = new TreeNode( 8 );
@@ -261,9 +261,16 @@ public class Interview {
 		
 		
 		TopFrequentElements tfe = new TopFrequentElements();
-		int [] tfe1 = { 8, 8, 8, 9, 2,2, 3, 1,1};
-		int k = 2;
+//		int [] tfe1 = { 8, 8, 8, 9, 2,2, 3, 1,1};
+		int [] tfe1 = { 1,2 };		
+		int k = 1;
 		System.out.println( tfe.frequentElements( tfe1, k) );
+		
+		
+		
+		QueueReconstructionByHeight rq = new QueueReconstructionByHeight();
+		int [][] people = { {7,0} , {4,4} , {7,1} , {5,0} , {6,1} , {5,2} };
+		System.out.println( rq.reconstructQueue( people ) );
 		
 		
 		
