@@ -270,7 +270,18 @@ public class Interview {
 		
 		QueueReconstructionByHeight rq = new QueueReconstructionByHeight();
 		int [][] people = { {7,0} , {4,4} , {7,1} , {5,0} , {6,1} , {5,2} };
-		System.out.println( rq.reconstructQueue( people ) );
+		rq.reconstructQueue(people);
+		
+		
+		
+		BTMaxLevel btml = new BTMaxLevel();
+		TreeNode btml1 = new TreeNode(0);
+		btml1.right = new TreeNode(9);
+		btml1.left = new TreeNode(1);
+		btml1.left.left = new TreeNode(3);
+		btml1.right.right = new TreeNode(8);
+		btml.rob( btml1 );
+		
 		
 		
 		

@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -22,6 +23,8 @@ public class QueueReconstructionByHeight {
 		
 		int [][] result = new int [people.length][2]  ;
 		HashMap <Integer, Integer> map = new HashMap<>();
+		
+		LinkedList <Value> list = new LinkedList<>();
 		
 //		for( int row = 0; row < people.length ; row++ ){
 ////			for( int col = 0; col < 2 ; col++){
@@ -49,23 +52,48 @@ public class QueueReconstructionByHeight {
 		});
 		
 		
-		
-//		for( int row = 0; row < people.length ; row++ ){
-////			for( int col = 0; col < 2 ; col++){
-//				
-//			int [] temp = people[row];
-//			people[row] = people[];
-//			
-//			
-//				people[1] = people[1];
-//
-////			}
-//		}
-		
-		
-		
 		// arrange each elements
+		for( int row = 0; row < people.length ; row++ ){
+//			for( int col = 0; col < 2 ; col++){
+				
+				int height = people[row][0]; // get first value
+				int infrontpplnum = people[row][1]; // get second value
+				
+				
+				System.out.println(height + " " + infrontpplnum);
+//				people[1] = people[1];
+			
+//				if( 1 == 1 ){
+//					swaparray2d( people[row], people[row] );
+//				}
+				
+				Value value = new Value( height, infrontpplnum );
+				
+				if(list.isEmpty())
+					list.add(value);
+				else{
+					
+					int infront = 0;
+					
+					// loop the result list
+					for(Value x: list){
+						
+						if(x.height >= height){
+							++infront;
+						}
+						
+					}
+					
+					list.add(value);
+					
+					
+				}
+				
+
+//			}
+		}
 		
+				
 		
 		
 //		for(Map.Entry<Integer, Integer> m : map.entrySet()){
@@ -87,5 +115,29 @@ public class QueueReconstructionByHeight {
 		return people;
 		
 	}
+	
+	
+	public void swaparray2d( int [] a, int [] b){
+		int [] temp = a;
+		a = b;
+		b = temp;
+	}
+	
+	
+	
+	public class Value{
+		Value prev;
+		Value next;
+		
+		int height;
+		int infront;
+		
+		Value(int x, int y){
+			height = x;
+			infront = y;
+		}
+		
+	}
+	
 
 }
