@@ -26,6 +26,10 @@ public class BTMaxLevel {
 			TreeNode current = queue.peek();
 			
 			height = queue.size();
+			for(TreeNode x : queue){
+				System.out.print( "-" + x.val);
+			}
+			System.out.println("height " + height);
 			
 			while(height > 0){
 				
