@@ -284,6 +284,10 @@ public class Interview {
 		
 		
 		
+		Subsets subsets = new Subsets();
+		int [] subsets1 = { 1,2,3,6,8 };
+		subsets.subsets( subsets1 );
+		
 		
 		
 	}

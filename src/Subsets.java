@@ -13,8 +13,9 @@ public class Subsets {
 		
 		List<Integer> subset = new ArrayList<>();
 		
-		subset.add(10);
-		
+//		for(){
+			subset.add(10);
+//		}
 		
 		
 		
