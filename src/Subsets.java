@@ -13,9 +13,16 @@ public class Subsets {
 		
 		List<Integer> subset = new ArrayList<>();
 		
-//		for(){
-			subset.add(10);
-//		}
+		int size = nums.length;
+		
+		
+		for(int i = 0; i< size ; i++ ){
+			
+			for(int j=i; j<size; j++ ){
+				subset.add(nums[j]);
+			}
+			
+		}
 		
 		
 		
