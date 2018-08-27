@@ -18,9 +18,16 @@ public class Subsets {
 		
 		for(int i = 0; i< size ; i++ ){
 			
+			
 			for(int j=i; j<size; j++ ){
+				
 				subset.add(nums[j]);
+				
+				
 			}
+			
+			
+			result.add(subset);
 			
 		}
 		
