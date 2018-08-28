@@ -27,6 +27,8 @@ public class Subsets {
 			}
 			
 			
+			subset.add(nums[i]);
+			
 			result.add(subset);
 			
 		}
